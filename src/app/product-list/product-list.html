@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    @if (isFetching()) {
+    <p>Loading products...</p>
+    } @else { @for (product of gettingProducts(); track product.id) {
+    <ul>
+      <app-product-item [product]="product"></app-product-item>
+    </ul>
+    } }
+  </ul>
+</div>
