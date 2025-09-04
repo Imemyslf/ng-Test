@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Comfort Fit Joggers",
+    "slug": "classic-comfort-fit-joggers",
+    "price": 25,
+    "description": "Discover the perfect blend of style and comfort with our Classic Comfort Fit Joggers. These versatile black joggers feature a soft elastic waistband, two side pockets, and ribbed ankle cuffs for a secure fit.",
+    "category": {
+      "id": 1,
+      "name": "Clothes",
+      "slug": "clothes",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/ZKGofuB.jpeg",
+      "https://i.imgur.com/GJi73H0.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:44:58.000Z",
+    "updatedAt": "2025-09-03T19:44:58.000Z"
+  },
+  {
+    "id": 2,
+    "title": "Urban Explorer Denim Jacket",
+    "slug": "urban-explorer-denim-jacket",
+    "price": 45,
+    "description": "A timeless denim jacket with a modern twist. Features a classic collar, button-front closure, and two chest pockets.",
+    "category": {
+      "id": 1,
+      "name": "Clothes",
+      "slug": "clothes",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/1bX5QH6.jpeg",
+      "https://i.imgur.com/2nCt3Sb.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:00.000Z",
+    "updatedAt": "2025-09-03T19:45:00.000Z"
+  },
+  {
+    "id": 3,
+    "title": "Minimalist White Sneakers",
+    "slug": "minimalist-white-sneakers",
+    "price": 60,
+    "description": "Step out in style with these minimalist white sneakers. Crafted with premium materials for all-day comfort.",
+    "category": {
+      "id": 2,
+      "name": "Shoes",
+      "slug": "shoes",
+      "image": "https://i.imgur.com/6RLwK2D.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/3Q1Z1Zl.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:02.000Z",
+    "updatedAt": "2025-09-03T19:45:02.000Z"
+  },
+  {
+    "id": 4,
+    "title": "Everyday Cotton T-Shirt",
+    "slug": "everyday-cotton-t-shirt",
+    "price": 15,
+    "description": "A soft, breathable cotton t-shirt for everyday wear. Available in multiple colors.",
+    "category": {
+      "id": 1,
+      "name": "Clothes",
+      "slug": "clothes",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/4A1QK2D.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:04.000Z",
+    "updatedAt": "2025-09-03T19:45:04.000Z"
+  },
+  {
+    "id": 5,
+    "title": "Lightweight Sports Cap",
+    "slug": "lightweight-sports-cap",
+    "price": 12,
+    "description": "Stay cool and protected with this lightweight sports cap. Adjustable strap for a perfect fit.",
+    "category": {
+      "id": 3,
+      "name": "Accessories",
+      "slug": "accessories",
+      "image": "https://i.imgur.com/8Km9tLL.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/5A1QK2D.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:06.000Z",
+    "updatedAt": "2025-09-03T19:45:06.000Z"
+  },
+  {
+    "id": 6,
+    "title": "Eco-Friendly Canvas Tote",
+    "slug": "eco-friendly-canvas-tote",
+    "price": 18,
+    "description": "Carry your essentials in style with this eco-friendly canvas tote bag.",
+    "category": {
+      "id": 3,
+      "name": "Accessories",
+      "slug": "accessories",
+      "image": "https://i.imgur.com/8Km9tLL.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/6A1QK2D.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:08.000Z",
+    "updatedAt": "2025-09-03T19:45:08.000Z"
+  },
+  {
+    "id": 7,
+    "title": "Slim Fit Chinos",
+    "slug": "slim-fit-chinos",
+    "price": 30,
+    "description": "Versatile slim fit chinos suitable for both casual and formal occasions.",
+    "category": {
+      "id": 1,
+      "name": "Clothes",
+      "slug": "clothes",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/7A1QK2D.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:10.000Z",
+    "updatedAt": "2025-09-03T19:45:10.000Z"
+  },
+  {
+    "id": 8,
+    "title": "Waterproof Digital Watch",
+    "slug": "waterproof-digital-watch",
+    "price": 40,
+    "description": "A stylish waterproof digital watch with multiple functions.",
+    "category": {
+      "id": 3,
+      "name": "Accessories",
+      "slug": "accessories",
+      "image": "https://i.imgur.com/8Km9tLL.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/8A1QK2D.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:12.000Z",
+    "updatedAt": "2025-09-03T19:45:12.000Z"
+  },
+  {
+    "id": 9,
+    "title": "Casual Slip-On Loafers",
+    "slug": "casual-slip-on-loafers",
+    "price": 35,
+    "description": "Comfortable slip-on loafers perfect for everyday wear.",
+    "category": {
+      "id": 2,
+      "name": "Shoes",
+      "slug": "shoes",
+      "image": "https://i.imgur.com/6RLwK2D.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/9A1QK2D.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:14.000Z",
+    "updatedAt": "2025-09-03T19:45:14.000Z"
+  },
+  {
+    "id": 10,
+    "title": "Performance Running Shorts",
+    "slug": "performance-running-shorts",
+    "price": 22,
+    "description": "Lightweight running shorts designed for maximum comfort and breathability.",
+    "category": {
+      "id": 1,
+      "name": "Clothes",
+      "slug": "clothes",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg",
+      "creationAt": "2025-09-03T19:44:58.000Z",
+      "updatedAt": "2025-09-03T19:44:58.000Z"
+    },
+    "images": [
+      "https://i.imgur.com/10A1QK2D.jpeg"
+    ],
+    "creationAt": "2025-09-03T19:45:16.000Z",
+    "updatedAt": "2025-09-03T19:45:16.000Z"
+  }
+]

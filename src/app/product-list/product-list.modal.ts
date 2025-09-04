@@ -9,6 +9,17 @@ export interface ProductType {
     name: string;
     image: string;
     slug: string;
+    creationAt: string;
+    updatedAt: string;
   };
   images: string[];
+  creationAt: string;
+  updatedAt: string;
+}
+
+export interface CategoryType {
+  id: number;
+  name: string;
+  slug: string;
+  image: string;
 }
