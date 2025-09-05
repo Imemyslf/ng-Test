@@ -1,5 +1,5 @@
 import { Component, inject, input } from '@angular/core';
-import { ProductType } from '../product-list.modal';
+import { ProductItemType, ProductType } from '../product-list.modal';
 import { CurrencyPipe } from '@angular/common';
 import { AppCatService } from '../../add-cart/add-cart.service';
 
@@ -10,7 +10,7 @@ import { AppCatService } from '../../add-cart/add-cart.service';
   styleUrl: './product-item.css',
 })
 export class ProductItem {
-  product = input<ProductType | undefined>();
+  product = input<ProductItemType | undefined>();
   private cartService = inject(AppCatService);
 
   selectedItem(id: number | undefined) {

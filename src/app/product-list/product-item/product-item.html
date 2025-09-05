@@ -1,7 +1,7 @@
 <article>
   @if(product()){
   <div>
-    <img src="{{ product()?.images }}" alt="" />
+    <img src="{{ product()?.image }}" alt="" />
   </div>
   <p>{{ product()?.title }}</p>
   <p>{{ product()?.price | currency }}</p>

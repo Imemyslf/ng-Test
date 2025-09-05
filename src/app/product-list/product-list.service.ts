@@ -1,6 +1,6 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CategoryType, ProductType } from './product-list.modal';
+import { CategoryType, ProductItemType, ProductType } from './product-list.modal';
 import { catchError, map } from 'rxjs';
 
 @Injectable({
@@ -8,9 +8,9 @@ import { catchError, map } from 'rxjs';
 })
 export class ProductService {
   private httpClient = inject(HttpClient);
-  private products = signal<ProductType[]>([]);
+  private products = signal<ProductItemType[]>([]);
   private newproducts = signal<ProductType[]>([]);
-  private categoryProduct = signal<CategoryType[]>([]);
+  private categoryProduct = signal<ProductType[]>([]);
   private isCategorySelected = signal(false);
   // private newProducts = signal<ProductType[]>([]);
 
@@ -18,11 +18,11 @@ export class ProductService {
   loadIsCategorySelected = this.isCategorySelected.asReadonly();
   loadedCategories = computed(() => {
     const newProducts = [...this.products()];
-    return newProducts.filter((product) => product.category.name === this.categoryProduct.name);
+    // return newProducts.filter((product) => product.category.name === this.categoryProduct.name);
   });
 
   loadProducts() {
-    return this.fetchProducts('https://api.escuelajs.co/api/v1/products');
+    return this.fetchProducts('https://fakestoreapi.in/api/products');
   }
 
   getLimitedProducts(offset: number, limit: number) {
@@ -41,16 +41,19 @@ export class ProductService {
   }
 
   private fetchProducts(url: string) {
-    return this.httpClient.get<ProductType[]>(url).pipe(
-      map((data) => {
-        this.products.set(data);
-        return data;
-      }),
-      catchError((error) => {
-        console.error('Error fetching products:', error);
-        throw error;
-      })
-    );
+    return this.httpClient
+      .get<{ status: string; message: string; products: ProductItemType[] }>(url)
+      .pipe(
+        map((data) => {
+          this.products.set(data.products);
+          console.log('Products:- ', this.products);
+          return data.products;
+        }),
+        catchError((error) => {
+          console.error('Error fetching products:', error);
+          throw error;
+        })
+      );
   }
 
   private fetchCategories(url: string) {
@@ -67,9 +70,8 @@ export class ProductService {
 
   private fetchCategoryProduct(url: string) {
     console.log('Fetching category products from URL:', url);
-    return this.httpClient.get<CategoryType[]>(url).pipe(
+    return this.httpClient.get<CategoryType>(url).pipe(
       map((data) => {
-        this.categoryProduct.set(data);
         this.isCategorySelected.set(true);
         return data;
       })

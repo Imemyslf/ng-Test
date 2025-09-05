@@ -1,6 +1,17 @@
-<form >
-    <label for="email">Email:</label>
-    <input type="text" id="email">
-    <label for="password">Password:</label>
-    <input type="text" id="password"> 
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="control-row">
+    <div class="control">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" formControlName="name" />
+      <label for="email">Email</label>
+      <input id="email" type="text" name="email" formControlName="email" />
+    </div>
+    <div class="control">
+      <label for="password">Password</label>
+      <input id="password" type="text" name="password" formControlName="password" />
+    </div>
+  </div>
+  @if(form.valid && form.touched){
+  <button type="submit">Submit</button>
+  }
 </form>

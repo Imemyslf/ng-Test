@@ -1,7 +1,7 @@
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ProductService } from './product-list.service';
-import { ProductType } from './product-list.modal';
+import { ProductItemType, ProductType } from './product-list.modal';
 import { ProductItem } from './product-item/product-item';
 
 @Component({
@@ -15,7 +15,7 @@ export class ProductList implements OnInit {
   private destroyRef = inject(DestroyRef);
   private productService = inject(ProductService);
 
-  gettingProducts = signal<ProductType[]>([]);
+  gettingProducts = signal<ProductItemType[]>([]);
   isFetching = signal(false);
   error = signal('');
   choice = signal(true);
@@ -28,10 +28,10 @@ export class ProductList implements OnInit {
         // if (this.isCatselected === this.choice) {
         //   console.log(this.productService.loadedCategories);
         // } else {
-        this.gettingProducts.set(this.productService.getLimitedProducts(0, 10));
+        // this.gettingProducts.set(this.productService.getLimitedProducts(0, 10));
         // }
-        // this.gettingProducts.set(data);
-        console.log(this.gettingProducts);
+        this.gettingProducts.set(data);
+        console.log('Subscribe:- ', data);
       },
       error: (error) => {
         console.error(error);

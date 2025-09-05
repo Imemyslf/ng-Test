@@ -35,12 +35,18 @@ export class Category implements OnInit {
 
   selectCategory(categoryId: number) {
     console.log('Selected Category ID:', categoryId);
-    const subscription = this.productService.getCategoryProduct(categoryId).subscribe({
-      next: (data) => {
-        console.log('Products for Selected Category:', data);
-      },
-    });
+    // const subscription = this.productService.getCategoryProduct(categoryId).subscribe({
+    //   next: (data) => {
+    //     console.log('Products for Selected Category:', data.name);
+    //     console.log('Products:- ', this.productService.loadedProducts());
+    //     const categoryProducts = this.productService.loadedProducts().filter((product) => {
+    //       console.log(product.category.name, ' and ', data.name);
+    //       product.category.name === data.name;
+    //     });
+    //     console.log(categoryProducts);
+    //   },
+    // });
 
-    this.destroyRef.onDestroy(() => subscription.unsubscribe());
+    // this.destroyRef.onDestroy(() => subscription.unsubscribe());
   }
 }

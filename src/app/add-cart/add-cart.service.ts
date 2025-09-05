@@ -15,7 +15,7 @@ export class AppCatService {
   addCartItem(id: number) {
     const foundItem = this.products().find((product) => product.id === id);
     console.log('Found Item:- ', foundItem);
-    this.cartItems.set(foundItem);
+    // this.cartItems.set(foundItem);
     // this.cartItems.update((oldData) => {
     //   [...oldData, foundItem];
     // });

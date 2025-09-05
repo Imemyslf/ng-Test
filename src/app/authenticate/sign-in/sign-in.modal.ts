@@ -1,4 +1,11 @@
-export interface User {
+export interface UserType {
+  email: string | null;
+  password: string | null;
+  name: string | null;
+  avatar: string | null;
+}
+
+export interface UserData {
   id: number;
   email: string;
   password: string;
@@ -6,7 +13,6 @@ export interface User {
   role: string;
   avatar: string;
 }
-
 //   export const Users = {
 //     "id": 1,
 //     "email": "john@mail.com",
