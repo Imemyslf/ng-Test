@@ -1,7 +1,10 @@
-<li>
+<article>
   @if(product()){
+  <div>
+    <img src="{{ product()?.images }}" alt="" />
+  </div>
   <p>{{ product()?.title }}</p>
-  <p>{{ product()?.price }}</p>
-  <p>{{ product()?.description }}</p>
+  <p>{{ product()?.price | currency }}</p>
+  <button>Add to Cart</button>
   }
-</li>
+</article>

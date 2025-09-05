@@ -1,1 +1,10 @@
-<p>category works!</p>
+<ul>
+  @for(category of categories(); track category.id){
+  <li>
+    <label>
+      <input type="checkbox" [value]="category.id" />
+      {{ category.name }}
+    </label>
+  </li>
+  }
+</ul>

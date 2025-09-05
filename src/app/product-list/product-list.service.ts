@@ -43,9 +43,9 @@ export class ProductService {
   private fetchCategories(url: string) {
     return this.httpClient.get<CategoryType[]>(url).pipe(
       map((data) => {
-        const uniqueNames: string[] = [...new Set(data.map((category) => category.name))];
-        console.log(uniqueNames);
-        this.categoryList.set(uniqueNames);
+        // const uniqueNames: string[] = [...new Set(data.map((category) => category.name))];
+        // console.log(uniqueNames);
+        // this.categoryList.set(uniqueNames);
         return data;
       }),
       catchError((error) => {

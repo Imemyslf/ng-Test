@@ -1,5 +1,12 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { ProductService } from '../product-list/product-list.service';
+
+interface data {
+  id: number;
+  name: string;
+  slug: string;
+  image: string;
+}
 
 @Component({
   selector: 'app-category',
@@ -9,14 +16,18 @@ import { ProductService } from '../product-list/product-list.service';
 })
 export class Category implements OnInit {
   private productService = inject(ProductService);
-  categories = signal<string[]>([]);
+  private destroyRef = inject(DestroyRef);
+
+  categories = signal<data[]>([]);
 
   ngOnInit(): void {
     const subscription = this.productService.getCategories().subscribe({
       next: (data) => {
-        this.categories.set(data.map((category) => category.name));
+        console.log('Category Data:', data);
+        this.categories.set(data.slice(0, 8));
         console.log('Category Component:', this.categories);
       },
     });
+    this.destroyRef.onDestroy(() => subscription.unsubscribe());
   }
 }

@@ -1,4 +1,18 @@
-ul{
-    display: flex;
-    flex-wrap: wrap;
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+  padding: 0;
+}
+
+li {
+  height: 20rem;
+  width: 15rem;
+  border: none;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
 }

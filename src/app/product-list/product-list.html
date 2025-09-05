@@ -1,11 +1,16 @@
 <div>
-  <ul>
+  <div>
     @if (isFetching()) {
     <p>Loading products...</p>
-    } @else { @for (product of gettingProducts(); track product.id) {
+    } @else {
+
     <ul>
-      <app-product-item [product]="product"></app-product-item>
+      @for (product of gettingProducts(); track product.id) {
+      <li>
+        <app-product-item [product]="product"></app-product-item>
+      </li>
+      }
     </ul>
-    } }
-  </ul>
+    }
+  </div>
 </div>

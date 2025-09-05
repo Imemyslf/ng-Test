@@ -1,0 +1,6 @@
+div {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  gap: 20px;
+}
