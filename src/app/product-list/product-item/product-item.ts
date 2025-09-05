@@ -1,6 +1,7 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { ProductType } from '../product-list.modal';
 import { CurrencyPipe } from '@angular/common';
+import { AppCatService } from '../../add-cart/add-cart.service';
 
 @Component({
   selector: 'app-product-item',
@@ -10,4 +11,10 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class ProductItem {
   product = input<ProductType | undefined>();
+  private cartService = inject(AppCatService);
+
+  selectedItem(id: number | undefined) {
+    console.log('Add to cart', id);
+    this.cartService.addCartItem(id!);
+  }
 }

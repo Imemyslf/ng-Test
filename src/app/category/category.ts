@@ -1,5 +1,6 @@
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { ProductService } from '../product-list/product-list.service';
+import { CategoryType } from '../product-list/product-list.modal';
 
 interface data {
   id: number;
@@ -19,6 +20,7 @@ export class Category implements OnInit {
   private destroyRef = inject(DestroyRef);
 
   categories = signal<data[]>([]);
+  selectedCategories = signal<number[]>([]);
 
   ngOnInit(): void {
     const subscription = this.productService.getCategories().subscribe({
@@ -28,6 +30,17 @@ export class Category implements OnInit {
         console.log('Category Component:', this.categories);
       },
     });
+    this.destroyRef.onDestroy(() => subscription.unsubscribe());
+  }
+
+  selectCategory(categoryId: number) {
+    console.log('Selected Category ID:', categoryId);
+    const subscription = this.productService.getCategoryProduct(categoryId).subscribe({
+      next: (data) => {
+        console.log('Products for Selected Category:', data);
+      },
+    });
+
     this.destroyRef.onDestroy(() => subscription.unsubscribe());
   }
 }

@@ -1,10 +1,13 @@
 <ul>
   @for(category of categories(); track category.id){
   <li>
-    <label>
-      <input type="checkbox" [value]="category.id" />
-      {{ category.name }}
-    </label>
+    <input
+      type="radio"
+      name="category"
+      [value]="category.name"
+      (change)="selectCategory(category.id)"
+    />
+    {{ category.name }}
   </li>
   }
 </ul>

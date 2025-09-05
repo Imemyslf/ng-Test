@@ -6,11 +6,9 @@ ul {
 li {
   list-style: none;
   margin-bottom: 12px;
-}
-
-label {
   cursor: pointer;
   width: 100%;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 }

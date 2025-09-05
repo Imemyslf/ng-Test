@@ -1,6 +1,10 @@
 div {
   display: flex;
-  max-width: 80%;
+  max-width: 90%;
   margin: auto;
   gap: 20px;
+}
+
+app-add-cart {
+  width: 30%;
 }

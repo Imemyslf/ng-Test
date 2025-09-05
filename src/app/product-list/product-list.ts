@@ -18,12 +18,18 @@ export class ProductList implements OnInit {
   gettingProducts = signal<ProductType[]>([]);
   isFetching = signal(false);
   error = signal('');
+  choice = signal(true);
+  isCatselected = this.productService.loadIsCategorySelected;
 
   ngOnInit() {
     this.isFetching.set(true);
     const subscription = this.productService.loadProducts().subscribe({
       next: (data) => {
+        // if (this.isCatselected === this.choice) {
+        //   console.log(this.productService.loadedCategories);
+        // } else {
         this.gettingProducts.set(this.productService.getLimitedProducts(0, 10));
+        // }
         // this.gettingProducts.set(data);
         console.log(this.gettingProducts);
       },

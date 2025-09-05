@@ -1,0 +1,11 @@
+<div>
+  <h2>Cart Items</h2>
+  @if(cartItem()){
+  <div class="add--cart-div">
+    <p>{{ cartItem()?.title }}</p>
+    <p>{{ cartItem()?.price }}</p>
+  </div>
+  } @else {
+  <p>No item selected</p>
+  }
+</div>
