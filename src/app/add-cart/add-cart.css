@@ -1,6 +1,40 @@
 .add--cart-div {
-  height: 10rem;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+p {
+  font-size: medium;
+}
+
+button {
+  width: 100%;
+  background: #0469edb3;
+  border-radius: 10px;
+  padding: 0.2rem;
+  font-size: medium;
+}
+
+.cart-item--title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cart-item--title p {
+  border-radius: 10px;
+  padding: 0.2rem;
+  font-weight: 500;
+}
+
+.cart-item--title p a {
+  text-decoration: none;
+  color: black;
+}
+.cart-item--title p:hover,
+p:active {
+  background: #0469edb3;
+  cursor: pointer;
 }

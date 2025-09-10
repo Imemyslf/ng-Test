@@ -5,11 +5,16 @@
     } @else {
 
     <ul>
-      @for (product of gettingProducts(); track product.id) {
+      @if(gettingProducts().length === 0){
+      <p>No Products in the Selected Category</p>
+      } @else { @for (product of gettingProducts(); track product.id) {
       <li>
-        <app-product-item [product]="product"></app-product-item>
+        <app-product-item
+          [product]="product"
+          (click)="selectedProductView(product.id)"
+        ></app-product-item>
       </li>
-      }
+      } }
     </ul>
     }
   </div>

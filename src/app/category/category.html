@@ -1,11 +1,15 @@
 <ul>
+  <div style="display: flex">
+    <input type="radio" name="category" value="All" (click)="resetProducts()" />
+    <p>All</p>
+  </div>
   @for(category of categories(); track category.id){
   <li>
     <input
       type="radio"
       name="category"
       [value]="category.name"
-      (change)="selectCategory(category.id)"
+      (change)="selectCategory(category)"
     />
     {{ category.name }}
   </li>

@@ -1,0 +1,27 @@
+<div class="check-out--overview">
+  <h1>Products ({{ cartItems().length }})</h1>
+  <div class="item--preview">
+    <p>Product Name</p>
+    <p>Images</p>
+    <p>Price</p>
+    <p>Category</p>
+  </div>
+  @if(cartItems()){ @for(item of cartItems(); track item.id){
+  <div class="item--preview">
+    <p>{{ item.title }}</p>
+    <div class="image--container">
+      <img src="{{ item.images }}" alt="" />
+    </div>
+    <p>{{ item.price | currency }}</p>
+    <p>{{ item.category.name }}</p>
+  </div>
+
+  }
+  <div class="total">
+    <p>Total:</p>
+    <p>{{ totalPrice | currency }}</p>
+  </div>
+  } @else{
+  <p>Cart Items Empty</p>
+  }
+</div>

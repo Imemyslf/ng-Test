@@ -1,10 +1,18 @@
 div {
-  display: flex;
-  max-width: 90%;
-  margin: auto;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 0.4fr 2.7fr 0.7fr;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-
+app-category {
+  min-width: 150px;
+  max-width: 180px;
+}
+app-product-list {
+  box-sizing: border-box;
+}
 app-add-cart {
-  width: 30%;
+  min-width: 180px;
+  max-width: 200px;
+  align-self: flex-start;
 }

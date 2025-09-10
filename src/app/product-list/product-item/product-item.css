@@ -11,25 +11,60 @@ article {
   box-sizing: border-box;
 }
 
-article div {
+.product-image-container {
   width: 100%;
-  height: 140px; 
+  height: 180px; /* Fixed height for all images */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
-article img {
+.product-image-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 8px;
+  background: #f5f5f5;
 }
 
-article p {
-  margin: 4px 0;
+.product-title {
+  margin: 0 0 4px 0;
   font-size: 1rem;
   color: #222;
   text-align: center;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.price--atc-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.price--atc-div .price {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+.price--atc-div button {
+  flex: 1 1 auto;
+  /* max-width: 110px; */
+  background: #0469edb3;
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }

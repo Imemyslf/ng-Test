@@ -1,8 +1,11 @@
 export interface UserType {
   email: string | null;
   password: string | null;
-  name: string | null;
-  avatar: string | null;
+  name?: string | null;
+  avatar?: string | null;
+  role?: string;
+  creationAt?: string;
+  updatedAt?: string;
 }
 
 export interface UserData {
@@ -13,9 +16,10 @@ export interface UserData {
   role: string;
   avatar: string;
 }
+
 //   export const Users = {
-//     "id": 1,
-//     "email": "john@mail.com",
+//     id: 1,
+//     email": "john@mail.com",
 //     "password": "changeme",
 //     "name": "Jhon",
 //     "role": "customer",

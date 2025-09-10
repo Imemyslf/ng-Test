@@ -1,11 +1,15 @@
 <div>
-  <h2>Cart Items</h2>
-  @if(cartItem()){
-  <div class="add--cart-div">
-    <p>{{ cartItem()?.title }}</p>
-    <p>{{ cartItem()?.price }}</p>
+  @if(catItemSlected()){
+  <div class="cart-item--title">
+    <h2>Cart Items</h2>
+    <p><a routerLink="/check-out">Done</a></p>
   </div>
-  } @else {
-  <p>No item selected</p>
-  }
+  } @if(cartItem().length > 0){ @for(item of cartItem(); track item.id){
+
+  <div class="add--cart-div">
+    <p>{{ item?.title }}</p>
+    <p>{{ item?.price | currency }}</p>
+  </div>
+  <button (click)="removeItemFromCart(item.id)">Remove</button>
+  } }
 </div>

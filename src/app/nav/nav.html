@@ -4,14 +4,15 @@
       <input type="text" placeholder="Search products..." class="input--search" />
       <button>Search</button>
     </div>
-    <ul class="ul--list ul--list-nav">
-      <li>Home</li>
-      <li>Products</li>
-      <li>Contact</li>
-    </ul>
+    <div class="image--container">
+      <a routerLink="/"><img src="/Products.svg" alt="Products Logo" /></a>
+    </div>
+    <!-- <ul class="ul--list ul--list-nav">
+      <li><a routerLink="/">Products</a></li>
+    </ul> -->
     <ul class="ul--list ul--list-auth">
-      <li>Log In</li>
-      <li><a routerLink="/sign-up">Sign Up</a></li>
+      <li><a routerLink="/log-in" routerLinkActive="selected">LOG IN</a></li>
+      <li><a routerLink="/sign-up" routerLinkActive="selected">SIGN UP</a></li>
     </ul>
   </nav>
 </header>

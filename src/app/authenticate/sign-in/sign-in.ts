@@ -36,20 +36,9 @@ export class SignIn {
       email: this.form.controls.email.value,
       password: this.form.controls.password.value,
       avatar: 'https://picsum.photos/800',
+      role: 'Customer',
     };
     console.log('Before Submitting the user:- ' + user);
     this.authService.userSignIn(user);
   }
 }
-
-// loadedUsersDetails: User[] = [];
-// private httpClient = inject(HttpClient);
-
-// ngOnInit(): void {
-//   this.httpClient.get<User[]>('https://api.escuelajs.co/api/v1/users').subscribe({
-//     next: (data) => {
-//       this.loadedUsersDetails = data;
-//       console.log('User data loaded successfully:', this.loadedUsersDetails);
-//     },
-//   });
-// }

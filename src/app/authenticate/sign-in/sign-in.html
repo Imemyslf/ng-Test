@@ -1,17 +1,24 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div class="control-row">
-    <div class="control">
-      <label for="name">Name</label>
-      <input id="name" type="text" name="name" formControlName="name" />
-      <label for="email">Email</label>
-      <input id="email" type="text" name="email" formControlName="email" />
+<div class="form--start">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h2>SIGN-UP</h2>
+    <div class="control-row">
+      <div class="control">
+        <div style="display: flex; flex-direction: column">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" formControlName="name" />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="email">Email</label>
+          <input id="email" type="text" name="email" formControlName="email" />
+        </div>
+      </div>
+      <div class="control">
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" formControlName="password" />
+      </div>
     </div>
-    <div class="control">
-      <label for="password">Password</label>
-      <input id="password" type="text" name="password" formControlName="password" />
-    </div>
-  </div>
-  @if(form.valid && form.touched){
-  <button type="submit">Submit</button>
-  }
-</form>
+    @if(form.valid && form.touched){
+    <button type="submit">Submit</button>
+    }
+  </form>
+</div>

@@ -1,10 +1,12 @@
 <article>
   @if(product()){
-  <div>
-    <img src="{{ product()?.image }}" alt="" />
+  <div class="product-image-container">
+    <img src="{{ product()?.images }}" alt="" />
   </div>
-  <p>{{ product()?.title }}</p>
-  <p>{{ product()?.price | currency }}</p>
-  <button (click)="selectedItem(product()?.id)">Add to Cart</button>
+  <div class="product-title">{{ product()?.title }}</div>
+  <div class="price--atc-div">
+    <span class="price">{{ product()?.price | currency }}</span>
+    <button (click)="selectedItem(product()?.id)">Add to Cart</button>
+  </div>
   }
 </article>
